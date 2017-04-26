@@ -11,8 +11,6 @@ describe('TodoAPI', () => {
     expect(TodoAPI).toExist();
   });
 
-
-
   describe('filterTodos', () => {
     var todos = [{
       id: 1,

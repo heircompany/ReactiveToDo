@@ -2,7 +2,7 @@ const
 express = require('express');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.use(express.static("public"));
 
 app.use(function(req, res, next) {
@@ -13,6 +13,6 @@ app.use(function(req, res, next) {
     }
 });
 
-app.listen(port, () => {
-  console.log(`Application launched on port:${port}`);
+app.listen(PORT, () => {
+  console.log(`Application launched on port:${PORT}`);
 });

@@ -1,6 +1,7 @@
 // * adds all properties to redux object by default
 import * as redux from "redux";
 import thunk from "redux-thunk";
+
 import {searchTextReducer, showCompletedReducer, todosReducer} from "reducers";
 
 export var configure = (initialState = {}) => {
