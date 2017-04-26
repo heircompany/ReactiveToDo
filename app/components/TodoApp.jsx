@@ -6,18 +6,18 @@ import TodoList from 'TodoList'
 import AddTodo from 'AddTodo';
 import TodoSearch from 'TodoSearch';
 
-export var TodoApp = React.createClass({
+export class TodoApp extends React.Component {
   onLogout(e) {
     e.preventDefault();
     var{dispatch} = this.props;
 
     dispatch(actions.startLogout());
-  },
+  }
   render() {
     return (
       <div>
         <div className="page-actions">
-          <a className="button alert" href="#" onClick={this.onLogout}>Logout</a>
+          <a className="button alert" href="#" onClick={this.onLogout.bind(this)}>Logout</a>
         </div>
         <h1 className="page-title">Todo App</h1>
 
@@ -33,6 +33,6 @@ export var TodoApp = React.createClass({
       </div>
     )
   }
-});
+};
 
 export default Redux.connect()(TodoApp);
